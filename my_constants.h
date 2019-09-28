@@ -1,0 +1,8 @@
+#ifndef MY_CONSTANTS_H_INCLUDED
+#define MY_CONSTANTS_H_INCLUDED
+
+#define OUTPUT_TEXT "Hello, world!"
+
+
+
+#endif // MY_CONSTANTS_H_INCLUDED
