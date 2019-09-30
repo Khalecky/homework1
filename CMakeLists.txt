@@ -30,6 +30,18 @@ target_link_libraries(homework1_tests ${Boost_LIBRARIES})
 
 install(TARGETS homework1_app RUNTIME DESTINATION bin)
 
+set(CPACK_GENERATOR DEB)
+
+set(CPACK_PACKAGE_VERSION_MAJOR "${PROJECT_VERSION_MAJOR}")
+set(CPACK_PACKAGE_VERSION_MINOR "${PROJECT_VERSION_MINOR}")
+set(CPACK_PACKAGE_VERSION_PATCH "${PROJECT_VERSION_PATCH}")
+
+set(CPACK_PACKAGE_CONTACT shebdim@gmail.com)
+
+set(CPACK_DEBIAN_PACKAGE_SHLIBDEPS ON)
+
+include(CPack)
+
 enable_testing()
 
 add_test(test1 homework1_tests)
