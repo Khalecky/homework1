@@ -10,10 +10,10 @@ message("***********************************************************************
 find_package(Boost COMPONENTS unit_test_framework REQUIRED)
 
 configure_file(version.h.in ${PROJECT_SOURCE_DIR}/version.h)
-add_executable(homework1_app main.cpp)
+add_executable(helloworld main.cpp)
 add_executable(homework1_tests tests/test_module.cpp)
 
-set_target_properties(homework1_app homework1_tests PROPERTIES
+set_target_properties(helloworld homework1_tests PROPERTIES
     CXX_STANDARD 14
     CXX_STANDARD_REQUIRED ON
     COMPILE_OPTIONS "-Wpedantic;-Wall;-Wextra"
@@ -28,7 +28,7 @@ set_target_properties(homework1_tests PROPERTIES
 target_link_libraries(homework1_tests ${Boost_LIBRARIES})
 
 
-install(TARGETS homework1_app RUNTIME DESTINATION bin)
+install(TARGETS helloworld RUNTIME DESTINATION bin)
 
 set(CPACK_GENERATOR DEB)
 
@@ -44,4 +44,4 @@ include(CPack)
 
 enable_testing()
 
-add_test(test1 homework1_tests)
+add_test(tests homework1_tests)
