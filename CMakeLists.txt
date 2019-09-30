@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.2)
 
-project(homework1 VERSION 0.0.$ENV{TRAVIS_BUILD_NUMBER})
+project(helloworld VERSION 0.0.$ENV{TRAVIS_BUILD_NUMBER})
 
 message("**** START CREATE MAKEFILE FOR ${PROJECT_NAME}: version=${PROJECT_VERSION}; build_number=${PROJECT_VERSION_PATCH} ****")
 message("************************************************************************")
